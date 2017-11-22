@@ -26,7 +26,7 @@ reqs = [str(ir.req) for ir in install_reqs]
 
 setup(
     name='python-symphony-binding',
-    version='0.0.1',
+    version='0.0.3',
     description='python module for symphony-binding',
     author='Matt Joyce',
     author_email='matt@joyce.nyc',
@@ -48,5 +48,6 @@ setup(
     packages=find_packages(),
     # bin files / python standalone executable scripts
     include_package_data=True,
+    data_files=[('config', ['swagger-specs/agent-api-public-deprecated.yaml', 'swagger-specs/pod-api-public-deprecated.yaml'])],
     zip_safe=False,
 )
