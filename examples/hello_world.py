@@ -17,18 +17,18 @@ def main():
     # connect to pod
     try:
         agent, pod, symphony_sid = conn.connect()
-        print 'connected: %s' % symphony_sid
-    except:
-        print 'failed to connect!'
+        print ('connected: %s' % (symphony_sid))
+    except Exception as err:
+        print ('failed to connect!: %s' % (err))
     # main loop
     msgFormat = 'MESSAGEML'
     message = '<messageML> hello world. </messageML>'
     # send message
     try:
         status_code, retstring = agent.send_message(symphony_sid, msgFormat, message)
-        print "%s: %s" % (status_code, retstring)
-    except:
-        print(retstring)
+        print ("%s: %s" % (status_code, retstring))
+    except Exception as err:
+        print (retstring, err)
 
 
 if __name__ == "__main__":
