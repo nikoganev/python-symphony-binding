@@ -30,7 +30,7 @@ setup(
     description='python module for symphony-binding',
     author='Matt Joyce',
     author_email='matt@joyce.nyc',
-    url='https://github.com/symphony-bindingoss/python-symphony-binding',
+    url='https://github.com/symphonyoss/python-symphony-binding',
     license='Apache 2.0',
     classifiers=[
         'Development Status :: 3 - Alpha',
