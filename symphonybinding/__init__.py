@@ -31,7 +31,8 @@ class SymCodegen():
         assert http_client
         # load deprecated agent codegen objects from spec
         try:
-            agent = SwaggerClient.from_spec(load_file(self.config_path + 'agent-api-public-deprecated.yaml'), config={'also_return_response': True})
+            agent = SwaggerClient.from_spec(load_file(self.config_path + 'agent-api-public-deprecated.yaml'),
+                                            config={'also_return_response': True})
             agent.swagger_spec.api_url = self.__url__
         except Exception as err:
             print (err)
@@ -43,7 +44,8 @@ class SymCodegen():
         assert http_client
         # load deprecated agent codegen objects from spec
         try:
-            pod = SwaggerClient.from_spec(load_file(self.config_path + '/pod-api-public-deprecated.yaml'), config={'also_return_response': True})
+            pod = SwaggerClient.from_spec(load_file(self.config_path + '/pod-api-public-deprecated.yaml'),
+                                          config={'also_return_response': True})
             pod.swagger_spec.api_url = self.__url__
         except Exception as err:
             print (err)
