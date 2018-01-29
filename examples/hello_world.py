@@ -28,7 +28,7 @@ def main():
         status_code, retstring = agent.send_message(symphony_sid, msgFormat, message)
         print ("%s: %s" % (status_code, retstring))
     except Exception as err:
-        print(retstring, err)
+        print (retstring, err)
 
 
 if __name__ == "__main__":
