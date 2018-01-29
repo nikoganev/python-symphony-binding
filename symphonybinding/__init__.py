@@ -23,7 +23,6 @@ class SymCodegen():
     def __init__(self):
         mydir = os.path.dirname(os.path.abspath(__file__))
         self.config_path = os.path.join(mydir, '../config/')
-        self.rando = 'wat'
 
     def agent_cg(self, url):
         http_client = RequestsClient()
