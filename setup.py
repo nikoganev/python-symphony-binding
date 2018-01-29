@@ -50,5 +50,5 @@ setup(
     include_package_data=True,
     data_files=[('config', ['swagger-specs/agent-api-public-deprecated.yaml',
                             'swagger-specs/pod-api-public-deprecated.yaml'])],
-    zip_safe=False,
+    zip_safe=False
 )
