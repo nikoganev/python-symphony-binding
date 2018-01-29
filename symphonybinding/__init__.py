@@ -34,7 +34,7 @@ class SymCodegen():
             agent = SwaggerClient.from_spec(load_file(self.config_path + 'agent-api-public-deprecated.yaml'), config={'also_return_response': True})
             agent.swagger_spec.api_url = self.__url__
         except Exception as err:
-            print err
+            print (err)
         return agent
 
     def pod_cg(self, url):
@@ -46,5 +46,5 @@ class SymCodegen():
             pod = SwaggerClient.from_spec(load_file(self.config_path + '/pod-api-public-deprecated.yaml'), config={'also_return_response': True})
             pod.swagger_spec.api_url = self.__url__
         except Exception as err:
-            print err
+            print (err)
         return pod
