@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 '''
     Execution:
@@ -26,11 +27,11 @@ reqs = [str(ir.req) for ir in install_reqs]
 
 setup(
     name='python-symphony-binding',
-    version='0.0.5',
+    version='0.0.9',
     description='python module for symphony-binding',
     author='Matt Joyce',
     author_email='matt@joyce.nyc',
-    url='https://github.com/symphony-bindingoss/python-symphony-binding',
+    url='https://github.com/symphonyoss/python-symphony-binding',
     license='Apache 2.0',
     classifiers=[
         'Development Status :: 3 - Alpha',
@@ -45,10 +46,8 @@ setup(
     keywords='symphony-binding chat api python module',
     # install dependencies from requirements.txt
     install_requires=reqs,
+    include_package_data=True,
     packages=find_packages(),
     # bin files / python standalone executable scripts
-    include_package_data=True,
-    data_files=[('config', ['swagger-specs/agent-api-public-deprecated.yaml',
-                            'swagger-specs/pod-api-public-deprecated.yaml'])],
-    zip_safe=False,
+    zip_safe=False
 )
