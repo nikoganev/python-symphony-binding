@@ -49,7 +49,5 @@ setup(
     packages=find_packages(),
     # bin files / python standalone executable scripts
     include_package_data=True,
-    data_files=[('config', ['swagger-specs/agent-api-public-deprecated.yaml',
-                            'swagger-specs/pod-api-public-deprecated.yaml'])],
     zip_safe=False
 )
