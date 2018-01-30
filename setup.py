@@ -46,8 +46,8 @@ setup(
     keywords='symphony-binding chat api python module',
     # install dependencies from requirements.txt
     install_requires=reqs,
+    include_package_data=True,
     packages=find_packages(),
     # bin files / python standalone executable scripts
-    include_package_data=True,
     zip_safe=False
 )
