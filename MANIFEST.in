@@ -5,5 +5,5 @@ include test-requirements.txt
 
 # Include the module locked swagger specifications
 include *.yaml *.py
-recursive-include *.yaml *.py
+recursive-include symphonybinding *.yaml
 
