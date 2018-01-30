@@ -21,8 +21,8 @@ from bravado.swagger_model import load_file
 class SymCodegen():
 
     def __init__(self):
-        self.agent_swagger = pkg_resources.resource_filename('agent-api-public-deprecated.yaml', 'config')
-        self.pod_swagger = pkg_resources.resource_filename('pod-api-public-deprecated.yaml', 'config')
+        self.agent_swagger = pkg_resources.resource_filename('symphonybinding', 'data/agent-api-public-deprecated.yaml')
+        self.pod_swagger = pkg_resources.resource_filename('symphonybinding', 'data/pod-api-public-deprecated.yaml')
 
     def agent_cg(self, url):
         http_client = RequestsClient()
