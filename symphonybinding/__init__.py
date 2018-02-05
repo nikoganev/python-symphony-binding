@@ -11,6 +11,7 @@ __email__ = 'matt@joyce.nyc'
 __copyright__ = 'Copyright 2016, Symphony Communication Services LLC'
 
 
+import logging
 import pkg_resources
 
 from bravado.requests_client import RequestsClient
@@ -20,9 +21,10 @@ from bravado.swagger_model import load_file
 
 class SymCodegen():
 
-    def __init__(self):
+    def __init__(self, logger=None):
         self.agent_swagger = pkg_resources.resource_filename('symphonybinding', 'data/agent-api-public-deprecated.yaml')
         self.pod_swagger = pkg_resources.resource_filename('symphonybinding', 'data/pod-api-public-deprecated.yaml')
+        self.logger = logger or logging.getLogger(__name__)
 
     def agent_cg(self, url):
         http_client = RequestsClient()
@@ -34,7 +36,7 @@ class SymCodegen():
                                             config={'also_return_response': True})
             agent.swagger_spec.api_url = self.__url__
         except Exception as err:
-            print (err)
+            self.logger.error(err)
         return agent
 
     def pod_cg(self, url):
@@ -47,5 +49,5 @@ class SymCodegen():
                                           config={'also_return_response': True})
             pod.swagger_spec.api_url = self.__url__
         except Exception as err:
-            print (err)
+            self.logger.error(err)
         return pod
