@@ -27,7 +27,7 @@ reqs = [str(ir.req) for ir in install_reqs]
 
 setup(
     name='python-symphony-binding',
-    version='0.0.9',
+    version='0.0.10',
     description='python module for symphony-binding',
     author='Matt Joyce',
     author_email='matt@joyce.nyc',
