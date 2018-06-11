@@ -1767,10 +1767,6 @@ definitions:
         type: integer
         format: int64
         description: Size in bytes.
-    required:
-    - id
-    - name
-    - size
   V2MessageList:
     type: array
     items:
